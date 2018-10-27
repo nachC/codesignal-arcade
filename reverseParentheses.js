@@ -1,4 +1,7 @@
 /*
+
+codepen link: https://codepen.io/nachc/pen/KGEWOe
+
 You have a string s that consists of English letters, punctuation marks, whitespace characters, and brackets.
 It is guaranteed that the parentheses in s form a regular bracket sequence.
 
@@ -42,8 +45,7 @@ function reverseParentheses(s) {
         }
 
         let firstIndexToSlice = openParenIndex[openParenIndex.length - 1] + 1 - parenCount;
-        let subStringArray = elements.slice(firstIndexToSlice, elements.length);
-        let reversedSubStringArray = reverseArray(subStringArray);
+        let reversedSubStringArray = reverseArray(elements.slice(firstIndexToSlice, elements.length));
 
         for(let j=0 ; j<reversedSubStringArray.length ; j++) {
           elements.splice(firstIndexToSlice + j, 1, reversedSubStringArray[j]);
